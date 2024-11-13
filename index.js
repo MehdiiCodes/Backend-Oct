@@ -1,5 +1,6 @@
 // importing express
 const express = require('express');
+const userRouter = require('./routers/userRouter');
 
 //creating an express app
 const app = express();
