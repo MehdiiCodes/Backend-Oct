@@ -16,6 +16,11 @@ router.get('/getbyid', (req, res) => {
     res.send('reaponse from user getbyid')
 })
 
+// update
+router.get('/update', (req, res) => {
+    res.send('reaponse from user update')
+})
+
 // delete
 router.get('/delete', (req, res) => {
     res.send('reaponse from user delete')
