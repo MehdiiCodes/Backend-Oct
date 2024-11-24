@@ -89,15 +89,7 @@ router.post('/authenticate', (req, res) => {
 
             jwt.sign(
                 payload,
-                process.env.JWT_SECRET
-                { expiresIn: '6h'},
-                (err, token) => {
-                    if (err) {
-                        res.status(500).json({ token });
-                    } else {
-                        res.status(200).json({ token });
-                    }
-                }
+                'myimppassword'
             )
 
         } else {
