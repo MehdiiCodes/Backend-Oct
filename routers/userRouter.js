@@ -89,11 +89,12 @@ router.post('/authenticate', (req, res) => {
 
             jwt.sign(
                 payload,
-                process.env.JWT_SECRET
+                process.env.JWT_SECRET,
                 { expiresIn: '6h'},
                 (err, token) => {
                     if (err) {
-                        res.status(500).json({ token });
+                        console.log(err);
+                        res.status(500).json({ err });
                     } else {
                         res.status(200).json({ token });
                     }
